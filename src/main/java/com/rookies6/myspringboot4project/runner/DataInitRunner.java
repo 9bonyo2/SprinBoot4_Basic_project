@@ -108,11 +108,11 @@ public class DataInitRunner implements CommandLineRunner {
         Student student = Student.builder()
                 .name(name)
                 .studentNumber(studentNumber)
-                //양방향 연관관계 설정
+                //양방향 연관관계 설정 student 객체와 studentDetail 객체와 연결
                 .studentDetail(detail)
                 .build();
 
-        //양방향 연관관계 설정
+        //양방향 연관관계 설정 StudentDetail 객체와 student 객체 연결
         detail.setStudent(student);
         return student;
     }
